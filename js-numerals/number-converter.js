@@ -38,8 +38,10 @@ function getTextFromNumber(num){
   let isFirst = true;
   let currentSchema = [];
   const additionalText = [" hundred", " million", " hundred", " thousand", " hundred", ""].reverse();  
+
+  if(!checkInput(num)) return "Please type a valid number between 0 and one billion";
   
-  if(1100 <= num && num < 2000 ) currentScheme = [2, 2];
+  if(1100 <= num && num < 2000 ) currentSchema = [2, 2];
   else{
     let counter = 1;
     let lengthOfNum = num.length;
@@ -66,6 +68,11 @@ function getTextFromNumber(num){
       case Number(number) in basicNums : return (num.length > 2 && isFirst ? "and " : "") + basicNums[Number(number)];
       default : return (num.length > 2 && isFirst ? "and " : "") + basicNums[number.charAt(0) + "0"] + "-" + basicNums[number.charAt(1)];
     }
+  }
+
+  function checkInput(number) { 
+    let reg = new RegExp('^((?!(0))[0-9]{1,9})$');          
+    return reg.test(number) || (number == "0") ? true: false;
   }
 }
 
