@@ -76,6 +76,10 @@ it('Seven digit number test 1', () =>
   expect(numberConverter("2264532")).toBe("two million two hundred sixty-four thousand five hundred and thirty-two")
 );
 
+it('Seven digit number test 2', () => 
+  expect(numberConverter("1100756")).toBe("one million one hundred thousand seven hundred and fifty-six")
+);
+
 it('Eight digit number test 1', () => 
   expect(numberConverter("64835627")).toBe("sixty-four million eight hundred thirty-five thousand six hundred and twenty-seven")
 );

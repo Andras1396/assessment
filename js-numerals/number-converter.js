@@ -39,7 +39,7 @@ function getTextFromNumber(num){
   let currentSchema = [];
   const additionalText = [" hundred", " million", " hundred", " thousand", " hundred", ""].reverse();  
   
-  if(num.length == 4 && (num.substring(0, 2) > 10 && num.substring(0, 2) < 20)) currentSchema = [2, 2];
+  if(1100 <= num && num < 2000 ) currentScheme = [2, 2];
   else{
     let counter = 1;
     let lengthOfNum = num.length;
@@ -54,7 +54,7 @@ function getTextFromNumber(num){
   for(let i = 0; i < currentSchema.length; i++){            
     sliceFrom += - currentSchema[i];
     let currentNumber = getOneOrTwoDigitNums(num.slice(sliceFrom, (i == 0 ? num.length : sliceFrom + currentSchema[i])));
-    textOfNum = (currentNumber != "" ? currentNumber + additionalText[i] : (i == 2 && num.length > 3 && num.length < 7 ?  additionalText[i] : (i == 4 && num.length > 6 && num.length < 10 ?  additionalText[i] : ""))) + " " + textOfNum; 
+    textOfNum = (currentNumber != "" ? currentNumber + additionalText[i] : (i == 2 && (num.length > 3 && num.length < 7 || num.slice(-6, -5) > 0) ?  additionalText[i] : (i == 4 && num.length > 6 && num.length < 10 ?  additionalText[i] : ""))) + " " + textOfNum; 
     isFirst = false;
   }
   
