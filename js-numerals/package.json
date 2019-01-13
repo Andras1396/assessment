@@ -1,0 +1,14 @@
+{
+  "name": "js-numerals",
+  "version": "1.0.0",
+  "description": "Javascript/Frontend Programmer - Exercise 1\r =============================",
+  "main": "number-converter.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
