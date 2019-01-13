@@ -28,6 +28,10 @@ const basicNums = {
     90: "ninety" 
 }
 
+function showResultOnPage(num){
+    document.getElementById("numberInText").innerHTML = getTextFromNumber(num);
+}
+
 function getTextFromNumber(num){    
   let sliceFrom = 0;
   let textOfNum = "";
