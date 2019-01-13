@@ -37,9 +37,9 @@ function getTextFromNumber(num){
   let textOfNum = "";
   let isFirst = true;
   let currentSchema = [];
-  const additionalText = [" hundred", " million", " hundred", " thousand", " hundred", ""].reverse();  
+  const additionalText = [" billion", " million", " thousand", ""].reverse(); 
 
-  if(!checkInput(num)) return "Please type a valid number between 0 and one billion";
+  if(!checkInput(num)) return "Please type a valid number between 0 and one trillion";
   
   if(1100 <= num && num < 2000 ) currentSchema = [2, 2];
   else{
@@ -55,8 +55,9 @@ function getTextFromNumber(num){
 
   for(let i = 0; i < currentSchema.length; i++){            
     sliceFrom += - currentSchema[i];
-    let currentNumber = getOneOrTwoDigitNums(num.slice(sliceFrom, (i == 0 ? num.length : sliceFrom + currentSchema[i])));
-    textOfNum = (currentNumber != "" ? currentNumber + additionalText[i] : (i == 2 && (num.length > 3 && num.length < 7 || num.slice(-6, -5) > 0) ?  additionalText[i] : (i == 4 && num.length > 6 && num.length < 10 ?  additionalText[i] : ""))) + " " + textOfNum; 
+    let currentNumber = getOneOrTwoDigitNums(num.slice(sliceFrom, (i == 0 ? num.length : sliceFrom + currentSchema[i])));  
+    if(i%2 != 0 && currentNumber != "") textOfNum = currentNumber + " hundred " + textOfNum
+    else if(i%2 == 0 && (currentNumber != "" || num.slice(-((i+3)+(i/2)), -((i+3)+(i/2))+1) > 0)) textOfNum = currentNumber + additionalText[i/2] + " " + textOfNum 
     isFirst = false;
   }
   
@@ -71,7 +72,7 @@ function getTextFromNumber(num){
   }
 
   function checkInput(number) { 
-    let reg = new RegExp('^((?!(0))[0-9]{1,9})$');          
+    let reg = new RegExp('^((?!(0))[0-9]{1,12})$');          
     return reg.test(number) || (number == "0") ? true: false;
   }
 }

@@ -1,11 +1,11 @@
 const numberConverter = require('./number-converter');
 
 it('Invalid input 1', () => 
-  expect(numberConverter("00")).toBe("Please type a valid number between 0 and one billion")
+  expect(numberConverter("00")).toBe("Please type a valid number between 0 and one trillion")
 );
 
 it('Invalid input 2', () => 
-  expect(numberConverter("asd22")).toBe("Please type a valid number between 0 and one billion")
+  expect(numberConverter("asd22")).toBe("Please type a valid number between 0 and one trillion")
 );
 
 it('One digit number test 1', () => 
