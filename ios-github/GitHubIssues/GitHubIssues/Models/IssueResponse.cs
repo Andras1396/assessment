@@ -5,10 +5,13 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace GitHubIssues.Models
 {
@@ -20,21 +23,28 @@ namespace GitHubIssues.Models
             public int Id { get; set; }
             public string Node_id { get; set; }
             public string Avatar_url { get; set; }
+
+            //local property
+            public Bitmap AvatarBitmap { get; set; }
         }
 
         public class PullRequest
         {
             public string Url { get; set; }
+            public string HtmlUrl { get; set; }
+            public string DiffUrl { get; set; }
+            public string PatchUrl { get; set; }
         }
 
-        public class RootObject
+        public class Issue
         {
             public int Number { get; set; }
             public string Title { get; set; }
             public User User { get; set; }
             public List<object> Labels { get; set; }
-            public DateTime CreatedAt { get; set; }
-            public PullRequest PullRequest { get; set; }
+            public DateTime Created_at { get; set; }
+
+            public PullRequest Pull_request { get; set; }
             public string Body { get; set; }
         }
     }

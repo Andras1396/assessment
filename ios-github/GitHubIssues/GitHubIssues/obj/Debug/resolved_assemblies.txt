@@ -13,6 +13,8 @@ E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\android\
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\android\assets\Xamarin.Android.Support.Annotations.dll
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\android\assets\Xamarin.Android.Support.Compat.dll
+E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\android\assets\Xamarin.Android.Support.Constraint.Layout.dll
+E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\android\assets\Xamarin.Android.Support.Constraint.Layout.Solver.dll
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\android\assets\Xamarin.Android.Support.Core.UI.dll
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\android\assets\Xamarin.Android.Support.Core.Utils.dll
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\android\assets\Xamarin.Android.Support.Design.dll

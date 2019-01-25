@@ -18,9 +18,9 @@ namespace GitHubIssues.Services
         }
 
 
-        public async Task<List<IssueResponse.RootObject>> GetIssues(string state, int pageNumber)
+        public async Task<List<IssueResponse.Issue>> GetIssues(string state, int pageNumber)
         {
-            List<IssueResponse.RootObject> responses = new List<IssueResponse.RootObject>();
+            List<IssueResponse.Issue> responses = new List<IssueResponse.Issue>();
             HttpWebRequest webRequest = System.Net.WebRequest.Create(baseURL) as HttpWebRequest;
             if (webRequest != null)
             {
@@ -34,7 +34,7 @@ namespace GitHubIssues.Services
                     {
                         string reader = responseReader.ReadToEnd();
                         var jsonobj = JsonConvert.DeserializeObject(reader);
-                        responses = JsonConvert.DeserializeObject<List<IssueResponse.RootObject>>(reader);                   
+                        responses = JsonConvert.DeserializeObject<List<IssueResponse.Issue>>(reader);                   
                     }
                 }
                 catch (Exception e)
