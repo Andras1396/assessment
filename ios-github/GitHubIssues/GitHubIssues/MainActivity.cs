@@ -15,10 +15,11 @@ using System.Linq;
 using Android.Views;
 using Android.Content;
 using Newtonsoft.Json;
+using System.Threading;
 
 namespace GitHubIssues
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme")]
     public class MainActivity : AppCompatActivity
     {
         private GitHubApiService service = new GitHubApiService();
@@ -31,23 +32,25 @@ namespace GitHubIssues
         IssueAdapter issueAdapter;
         SwitchCompat switchState;
 
-        protected async override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);           
 
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
             recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
             switchState = FindViewById<SwitchCompat>(Resource.Id.stateButton);
+
 
             switchState.CheckedChange += SwitchState_CheckedChange;
 
 
             layoutManager = new LinearLayoutManager(this);
             var onScrollListener = new RecyclerViewOnScrollListener((LinearLayoutManager)layoutManager);
-            onScrollListener.LoadMoreEvent += async (object sender, EventArgs e) => {
-                await AddIssues();
+            onScrollListener.LoadMoreEvent += (object sender, EventArgs e) => {
+                AddIssues(); ;
             };
             recyclerView.AddOnScrollListener(onScrollListener);
             recyclerView.SetLayoutManager(layoutManager);
@@ -55,18 +58,18 @@ namespace GitHubIssues
             issueAdapter.ItemClick += OnItemClick;
             recyclerView.SetAdapter(issueAdapter);
 
-            await AddIssues();
+            
+            AddIssues();
+
         }
 
-        private async void SwitchState_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
+        private void SwitchState_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
         {            
             stateIsOpen = !stateIsOpen;
             counter = 1;
             Issues.Clear();
-            await AddIssues();
-            recyclerView.SetAdapter(issueAdapter);
-            
-            
+            AddIssues();
+            issueAdapter.NotifyDataSetChanged();
         }
 
         private void OnItemClick(object sender, int e)
@@ -79,19 +82,33 @@ namespace GitHubIssues
             StartActivity(activity);
         }
 
-        private async Task AddIssues()
+
+        private void AddIssues()
         {
-            int scrolltoPosition = 0;
-            if (counter > 1) scrolltoPosition = recyclerView.GetAdapter().ItemCount;
-
-            List<IssueResponse.Issue> result = await service.GetIssues(stateIsOpen, counter);
-            var onlyIssues = RemovePullRequests(result);
-            Issues.AddRange(onlyIssues);           
-
+            var progressDialog = ProgressDialog.Show(this, "Please wait...", (counter == 1 ? "Loading issues..." : "Loading more issues..."), true);
             
-            if (counter > 1) recyclerView.ScrollToPosition(scrolltoPosition);
+            new Thread(new ThreadStart(async delegate
+            {
+                int scrolltoPosition = 0;
+                if (counter > 1) scrolltoPosition = recyclerView.GetAdapter().ItemCount;
+                var result = await service.GetIssues(stateIsOpen, counter);
+                RunOnUiThread(() => {                    
+                    if (result.ErrorMessage != null) Toast.MakeText(this, "Error occured", ToastLength.Long).Show();
+                    else if (result.RecievedIssues.Count == 0 && counter == 1) Toast.MakeText(this, "Unable to load issues", ToastLength.Long).Show();
+                    else if (result.RecievedIssues.Count == 0) Toast.MakeText(this, "Unable to load more " + (stateIsOpen ? "open" : "closed") + " issues", ToastLength.Short).Show();
+                    else
+                    {
+                        var onlyIssues = RemovePullRequests(result.RecievedIssues);
+                        Issues.AddRange(onlyIssues);
+                        issueAdapter.NotifyDataSetChanged();
+                        if (counter > 1) recyclerView.ScrollToPosition(scrolltoPosition);
+                        counter++;
 
-            counter++;
+                    }
+                });
+                RunOnUiThread(() => progressDialog.Hide());
+            })).Start();
+
         }
 
         private List<IssueResponse.Issue> RemovePullRequests(List<IssueResponse.Issue> issues)
@@ -101,6 +118,14 @@ namespace GitHubIssues
                 if (issue.Pull_request != null) issues.Remove(issue);
             }
             return issues;
+        }
+
+        
+
+        public class IssueResult
+        {
+            public List<IssueResponse.Issue> RecievedIssues {get; set;}
+            public string ErrorMessage {get; set;}
         }
     }
 }

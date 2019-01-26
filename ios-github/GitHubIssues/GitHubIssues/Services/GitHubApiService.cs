@@ -5,22 +5,23 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
+using static GitHubIssues.MainActivity;
 
 namespace GitHubIssues.Services
 {
 
     public class GitHubApiService
     {
-        private static string baseURL = "https://api.github.com/repos/github/hub/issues";
+        private static string baseURL = "https://api.github.com/repos/Alamofire/Alamofire/issues";
 
         public GitHubApiService()
         {
         }
 
 
-        public async Task<List<IssueResponse.Issue>> GetIssues(bool state, int pageNumber)
+        public async Task<IssueResult> GetIssues(bool state, int pageNumber)
         {
-            List<IssueResponse.Issue> responses = new List<IssueResponse.Issue>();
+            IssueResult response = new IssueResult();
             HttpWebRequest webRequest = System.Net.WebRequest.Create(baseURL + "?state=" + (state ? "open" : "closed") + "&page=" + pageNumber) as HttpWebRequest;
             if (webRequest != null)
             {
@@ -34,16 +35,16 @@ namespace GitHubIssues.Services
                     {
                         string reader = responseReader.ReadToEnd();
                         var jsonobj = JsonConvert.DeserializeObject(reader);
-                        responses = JsonConvert.DeserializeObject<List<IssueResponse.Issue>>(reader);                   
+                        response.RecievedIssues = JsonConvert.DeserializeObject<List<IssueResponse.Issue>>(reader);                   
                     }
                 }
                 catch (Exception e)
                 {
-                    var x = e;
+                    response.ErrorMessage = e.Message;
                 }
             }
 
-            return responses;
+            return response;
         }
     }
 }
