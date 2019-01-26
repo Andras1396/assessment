@@ -23,9 +23,7 @@ namespace GitHubIssues.Models
             public int Id { get; set; }
             public string Node_id { get; set; }
             public string Avatar_url { get; set; }
-
-            //local property
-            public Bitmap AvatarBitmap { get; set; }
+            
         }
 
         public class PullRequest
@@ -41,11 +39,17 @@ namespace GitHubIssues.Models
             public int Number { get; set; }
             public string Title { get; set; }
             public User User { get; set; }
-            public List<object> Labels { get; set; }
+            public List<Label> Labels { get; set; }
             public DateTime Created_at { get; set; }
 
             public PullRequest Pull_request { get; set; }
             public string Body { get; set; }
+        }
+
+        public class Label
+        {
+            public string Name { get; set; }
+            public string Color { get; set; }
         }
     }
 }

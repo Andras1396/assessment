@@ -18,10 +18,10 @@ namespace GitHubIssues.Services
         }
 
 
-        public async Task<List<IssueResponse.Issue>> GetIssues(string state, int pageNumber)
+        public async Task<List<IssueResponse.Issue>> GetIssues(bool state, int pageNumber)
         {
             List<IssueResponse.Issue> responses = new List<IssueResponse.Issue>();
-            HttpWebRequest webRequest = System.Net.WebRequest.Create(baseURL) as HttpWebRequest;
+            HttpWebRequest webRequest = System.Net.WebRequest.Create(baseURL + "?state=" + (state ? "open" : "closed") + "&page=" + pageNumber) as HttpWebRequest;
             if (webRequest != null)
             {
                 webRequest.Method = "GET";

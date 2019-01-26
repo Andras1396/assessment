@@ -24,10 +24,6 @@ namespace GitHubIssues
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
-		public static void UpdateIdValues()
-		{
-		}
-		
 		public partial class Animation
 		{
 			
@@ -2576,8 +2572,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F0C0008
 			public const int chronometer = 2131492872;
 			
-			// aapt resource value: 0x7F0C0020
-			public const int container = 2131492896;
+			// aapt resource value: 0x7F010004
+			public const int container = 2130771972;
 			
 			// aapt resource value: 0x7F0C0021
 			public const int contentPanel = 2131492897;
@@ -2669,20 +2665,17 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F0C000D
 			public const int italic = 2131492877;
 			
+			// aapt resource value: 0x7F010007
+			public const int item_attributes = 2130771975;
+			
 			// aapt resource value: 0x7F010005
-			public const int item_date = 2130771973;
-			
-			// aapt resource value: 0x7F010004
-			public const int item_name = 2130771972;
-			
-			// aapt resource value: 0x7F010006
-			public const int item_number = 2130771974;
-			
-			// aapt resource value: 0x7F010003
-			public const int item_title = 2130771971;
+			public const int item_title = 2130771973;
 			
 			// aapt resource value: 0x7F0C003B
 			public const int item_touch_helper_previous_elevation = 2131492923;
+			
+			// aapt resource value: 0x7F010006
+			public const int label_container = 2130771974;
 			
 			// aapt resource value: 0x7F0C003C
 			public const int largeLabel = 2131492924;
@@ -2765,8 +2758,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F0C0053
 			public const int radio = 2131492947;
 			
-			// aapt resource value: 0x7F010002
-			public const int recyclerView = 2130771970;
+			// aapt resource value: 0x7F010003
+			public const int recyclerView = 2130771971;
 			
 			// aapt resource value: 0x7F020003
 			public const int right = 2130837507;
@@ -2872,6 +2865,9 @@ namespace GitHubIssues
 			
 			// aapt resource value: 0x7F020004
 			public const int start = 2130837508;
+			
+			// aapt resource value: 0x7F010002
+			public const int stateButton = 2130771970;
 			
 			// aapt resource value: 0x7F0C0074
 			public const int status_bar_latest_event_content = 2131492980;
@@ -3143,7 +3139,10 @@ namespace GitHubIssues
 			public const int design_text_input_password_icon = 2131689512;
 			
 			// aapt resource value: 0x7F020003
-			public const int issue_item = 2130837507;
+			public const int issue_details = 2130837507;
+			
+			// aapt resource value: 0x7F020004
+			public const int issue_item = 2130837508;
 			
 			// aapt resource value: 0x7F0F0001
 			public const int notification_action = 2131689473;
@@ -4194,6 +4193,9 @@ namespace GitHubIssues
 			
 			// aapt resource value: 0x7F160110
 			public const int ThemeOverlay_AppCompat_Light = 2132148496;
+			
+			// aapt resource value: 0x7F060003
+			public const int ThemeOverlay_MySwitchCompat = 2131099651;
 			
 			// aapt resource value: 0x7F160111
 			public const int Theme_AppCompat = 2132148497;

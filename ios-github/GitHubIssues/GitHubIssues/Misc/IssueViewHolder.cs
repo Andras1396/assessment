@@ -16,17 +16,17 @@ namespace GitHubIssues.Misc
     {
         public View Item { get; private set; }
         public TextView Title { get; private set; }
-        public TextView Name { get; private set; }
-        public TextView Number { get; private set; }
-        public TextView Date { get; private set; }
+        public TextView Attributes { get; private set; }
+        public LinearLayout LabelContainer { get; private set; }
 
-        public IssueViewHolder(View itemView) : base(itemView)
+        public IssueViewHolder(View itemView, Action<int> listener) : base(itemView)
         {
             this.Item = itemView;
             this.Title = itemView.FindViewById<TextView>(Resource.Id.item_title);
-            this.Name = itemView.FindViewById<TextView>(Resource.Id.item_name);
-            this.Number = itemView.FindViewById<TextView>(Resource.Id.item_number);
-            this.Date = itemView.FindViewById<TextView>(Resource.Id.item_date);
+            this.Attributes = itemView.FindViewById<TextView>(Resource.Id.item_attributes);
+            this.LabelContainer = itemView.FindViewById<LinearLayout>(Resource.Id.label_container);
+
+            itemView.Click += (sender, e) => listener(base.LayoutPosition);
         }
     }
 }
