@@ -54,7 +54,7 @@ namespace GitHubIssues.Misc
                 string col = "#" + issue.Labels[i].Color;
                 tv.SetBackgroundColor(Color.ParseColor(col));
                 LinearLayout.LayoutParams ll = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
-                ll.SetMargins(0, 0, 0, 15);
+                ll.SetMargins(0, 0, 15, 10);
                 tv.LayoutParameters = ll;
                 tv.SetPadding(5, 5, 5, 5);
                 tv.TextSize = 11;

@@ -2542,6 +2542,12 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F0C0006
 			public const int async = 2131492870;
 			
+			// aapt resource value: 0x7F010011
+			public const int authorImage = 2130771985;
+			
+			// aapt resource value: 0x7F010012
+			public const int authorName = 2130771986;
+			
 			// aapt resource value: 0x7F0C0018
 			public const int auto = 2131492888;
 			
@@ -2572,8 +2578,11 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F0C0008
 			public const int chronometer = 2131492872;
 			
-			// aapt resource value: 0x7F010004
-			public const int container = 2130771972;
+			// aapt resource value: 0x7F010002
+			public const int closedText = 2130771970;
+			
+			// aapt resource value: 0x7F010006
+			public const int container = 2130771974;
 			
 			// aapt resource value: 0x7F0C0021
 			public const int contentPanel = 2131492897;
@@ -2662,20 +2671,32 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F020007
 			public const int invisible = 2130837511;
 			
+			// aapt resource value: 0x7F010010
+			public const int issueAttributes = 2130771984;
+			
+			// aapt resource value: 0x7F010009
+			public const int issueDescription = 2130771977;
+			
+			// aapt resource value: 0x7F010007
+			public const int issueTitle = 2130771975;
+			
 			// aapt resource value: 0x7F0C000D
 			public const int italic = 2131492877;
 			
-			// aapt resource value: 0x7F010007
-			public const int item_attributes = 2130771975;
+			// aapt resource value: 0x7F010015
+			public const int item_attributes = 2130771989;
 			
-			// aapt resource value: 0x7F010005
-			public const int item_title = 2130771973;
+			// aapt resource value: 0x7F010013
+			public const int item_title = 2130771987;
 			
 			// aapt resource value: 0x7F0C003B
 			public const int item_touch_helper_previous_elevation = 2131492923;
 			
-			// aapt resource value: 0x7F010006
-			public const int label_container = 2130771974;
+			// aapt resource value: 0x7F010008
+			public const int labelContainer = 2130771976;
+			
+			// aapt resource value: 0x7F010014
+			public const int label_container = 2130771988;
 			
 			// aapt resource value: 0x7F0C003C
 			public const int largeLabel = 2131492924;
@@ -2728,6 +2749,9 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F0C0013
 			public const int notification_main_column_container = 2131492883;
 			
+			// aapt resource value: 0x7F010004
+			public const int openText = 2130771972;
+			
 			// aapt resource value: 0x7F02000C
 			public const int packed = 2130837516;
 			
@@ -2758,8 +2782,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F0C0053
 			public const int radio = 2131492947;
 			
-			// aapt resource value: 0x7F010003
-			public const int recyclerView = 2130771971;
+			// aapt resource value: 0x7F010005
+			public const int recyclerView = 2130771973;
 			
 			// aapt resource value: 0x7F020003
 			public const int right = 2130837507;
@@ -2866,8 +2890,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F020004
 			public const int start = 2130837508;
 			
-			// aapt resource value: 0x7F010002
-			public const int stateButton = 2130771970;
+			// aapt resource value: 0x7F010003
+			public const int stateButton = 2130771971;
 			
 			// aapt resource value: 0x7F0C0074
 			public const int status_bar_latest_event_content = 2131492980;

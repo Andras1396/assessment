@@ -99,29 +99,9 @@ namespace GitHubIssues
             foreach (var issue in issues.Reverse<IssueResponse.Issue>())
             {
                 if (issue.Pull_request != null) issues.Remove(issue);
-                //else issue.User.AvatarBitmap = await GetImageBitmapFromUrl(issue.User.Avatar_url);
             }
             return issues;
         }
-
-        private async Task<Bitmap> GetImageBitmapFromUrl(string url)
-        {
-            Bitmap imageBitmap = null;
-
-            using (var webClient = new WebClient())
-            {
-                var imageBytes = webClient.DownloadData(url);
-                if (imageBytes != null && imageBytes.Length > 0)
-                {
-                    imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
-                }
-            }
-
-            return imageBitmap;
-        }
-
-
-
     }
 }
 
