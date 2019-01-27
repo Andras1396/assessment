@@ -1481,9 +1481,6 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F050003
 			public const int colorPrimaryDark = 2131034115;
 			
-			// aapt resource value: 0x7F050005
-			public const int darkerLine = 2131034117;
-			
 			// aapt resource value: 0x7F060027
 			public const int design_bottom_navigation_shadow_color = 2131099687;
 			
@@ -1544,11 +1541,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F06003A
 			public const int highlighted_text_material_light = 2131099706;
 			
-			// aapt resource value: 0x7F050009
-			public const int ic_launcher_background = 2131034121;
-			
-			// aapt resource value: 0x7F050006
-			public const int lighterLine = 2131034118;
+			// aapt resource value: 0x7F050005
+			public const int ic_launcher_background = 2131034117;
 			
 			// aapt resource value: 0x7F06003B
 			public const int material_blue_grey_800 = 2131099707;
@@ -1654,12 +1648,6 @@ namespace GitHubIssues
 			
 			// aapt resource value: 0x7F06005D
 			public const int switch_thumb_normal_material_light = 2131099741;
-			
-			// aapt resource value: 0x7F050007
-			public const int textDark = 2131034119;
-			
-			// aapt resource value: 0x7F050008
-			public const int textGrey = 2131034120;
 			
 			// aapt resource value: 0x7F06005E
 			public const int tooltip_background_dark = 2131099742;
@@ -3931,8 +3919,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F1600A9
 			public const int Base_Widget_Design_TabLayout = 2132148393;
 			
-			// aapt resource value: 0x7F070003
-			public const int MyTheme_Splash = 2131165187;
+			// aapt resource value: 0x7F070004
+			public const int MyTheme_Splash = 2131165188;
 			
 			// aapt resource value: 0x7F1600AA
 			public const int Platform_AppCompat = 2132148394;
@@ -4243,8 +4231,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F160110
 			public const int ThemeOverlay_AppCompat_Light = 2132148496;
 			
-			// aapt resource value: 0x7F070004
-			public const int ThemeOverlay_MySwitchCompat = 2131165188;
+			// aapt resource value: 0x7F070003
+			public const int ThemeOverlay_MySwitchCompat = 2131165187;
 			
 			// aapt resource value: 0x7F160111
 			public const int Theme_AppCompat = 2132148497;

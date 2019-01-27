@@ -8,19 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
   
-
   
-
-  <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
-    <item name="android:windowBackground">@drawable/splash_screen</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:windowFullscreen">true</item>
-  </style>
-
 
   <style name="ThemeOverlay.MySwitchCompat" parent="">
     <item name="colorControlActivated">#00ff00</item>
     <item name="colorSwitchThumbNormal">#ff0000</item>
     <item name="android:colorForeground">#4Dff0000</item>
+  </style>
+
+  <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
   </style>
 </resources>
