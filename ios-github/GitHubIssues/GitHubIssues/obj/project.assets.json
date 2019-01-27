@@ -608,11 +608,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DiNa\\first_assessment\\ios-github\\GitHubIssues\\GitHubIssues\\GitHubIssues.csproj",
+      "projectUniqueName": "E:\\DiNa\\assessment\\ios-github\\GitHubIssues\\GitHubIssues\\GitHubIssues.csproj",
       "projectName": "GitHubIssues",
-      "projectPath": "E:\\DiNa\\first_assessment\\ios-github\\GitHubIssues\\GitHubIssues\\GitHubIssues.csproj",
+      "projectPath": "E:\\DiNa\\assessment\\ios-github\\GitHubIssues\\GitHubIssues\\GitHubIssues.csproj",
       "packagesPath": "C:\\Users\\Soós András\\.nuget\\packages\\",
-      "outputPath": "E:\\DiNa\\first_assessment\\ios-github\\GitHubIssues\\GitHubIssues\\obj\\",
+      "outputPath": "E:\\DiNa\\assessment\\ios-github\\GitHubIssues\\GitHubIssues\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

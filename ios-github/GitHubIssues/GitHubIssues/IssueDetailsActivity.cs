@@ -59,7 +59,7 @@ namespace GitHubIssues
                 ll.SetMargins(0, 0, 15, 10);
                 tv.LayoutParameters = ll;
                 tv.SetPadding(5, 5, 5, 5);
-                tv.TextSize = 14;
+                tv.TextSize = 11;
                 labelContainer.AddView(tv);
             }
 
