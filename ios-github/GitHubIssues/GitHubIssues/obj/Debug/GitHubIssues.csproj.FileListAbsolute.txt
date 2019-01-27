@@ -33,7 +33,6 @@ E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\R.txt
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\uploadflags.txt
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\res\layout\issue_item.xml
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\res\layout\issue_details.xml
-E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\res\drawable\splash_icon.xml
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\res\drawable\splash_screen.xml
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\res\drawable\splash.png
 E:\DiNa\first_assessment\ios-github\GitHubIssues\GitHubIssues\obj\Debug\GitHubIssues.csprojAssemblyReference.cache

@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Closed"
-            android:textColor="#ff0000" />
+            android:textColor="@android:color/holo_red_dark" />
 
         <android.support.v7.widget.SwitchCompat
             android:id="@+id/stateButton"
@@ -43,13 +43,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Open"
-            android:textColor="#00ff00" />
+            android:textColor="@android:color/holo_green_dark" />
     </LinearLayout>
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dp"
-        android:background="#4d4746" />
+        android:background="@color/darkerLine" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

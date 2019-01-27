@@ -24,6 +24,10 @@ namespace GitHubIssues
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 		}
 		
+		public static void UpdateIdValues()
+		{
+		}
+		
 		public partial class Animation
 		{
 			
@@ -1477,6 +1481,9 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F050003
 			public const int colorPrimaryDark = 2131034115;
 			
+			// aapt resource value: 0x7F050005
+			public const int darkerLine = 2131034117;
+			
 			// aapt resource value: 0x7F060027
 			public const int design_bottom_navigation_shadow_color = 2131099687;
 			
@@ -1537,8 +1544,11 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F06003A
 			public const int highlighted_text_material_light = 2131099706;
 			
-			// aapt resource value: 0x7F050005
-			public const int ic_launcher_background = 2131034117;
+			// aapt resource value: 0x7F050009
+			public const int ic_launcher_background = 2131034121;
+			
+			// aapt resource value: 0x7F050006
+			public const int lighterLine = 2131034118;
 			
 			// aapt resource value: 0x7F06003B
 			public const int material_blue_grey_800 = 2131099707;
@@ -1644,6 +1654,12 @@ namespace GitHubIssues
 			
 			// aapt resource value: 0x7F06005D
 			public const int switch_thumb_normal_material_light = 2131099741;
+			
+			// aapt resource value: 0x7F050007
+			public const int textDark = 2131034119;
+			
+			// aapt resource value: 0x7F050008
+			public const int textGrey = 2131034120;
 			
 			// aapt resource value: 0x7F06005E
 			public const int tooltip_background_dark = 2131099742;
@@ -2458,10 +2474,7 @@ namespace GitHubIssues
 			public const int splash = 2130771970;
 			
 			// aapt resource value: 0x7F010003
-			public const int splash_icon = 2130771971;
-			
-			// aapt resource value: 0x7F010004
-			public const int splash_screen = 2130771972;
+			public const int splash_screen = 2130771971;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -2551,11 +2564,11 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F0C0006
 			public const int async = 2131492870;
 			
-			// aapt resource value: 0x7F020013
-			public const int authorImage = 2130837523;
+			// aapt resource value: 0x7F020011
+			public const int authorImage = 2130837521;
 			
-			// aapt resource value: 0x7F020014
-			public const int authorName = 2130837524;
+			// aapt resource value: 0x7F020012
+			public const int authorName = 2130837522;
 			
 			// aapt resource value: 0x7F0C0018
 			public const int auto = 2131492888;
@@ -2590,8 +2603,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F020002
 			public const int closedText = 2130837506;
 			
-			// aapt resource value: 0x7F020008
-			public const int container = 2130837512;
+			// aapt resource value: 0x7F020006
+			public const int container = 2130837510;
 			
 			// aapt resource value: 0x7F0C0021
 			public const int contentPanel = 2131492897;
@@ -2680,38 +2693,35 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F020007
 			public const int invisible = 2130837511;
 			
-			// aapt resource value: 0x7F020012
-			public const int issueAttributes = 2130837522;
-			
-			// aapt resource value: 0x7F020011
-			public const int issueDescription = 2130837521;
+			// aapt resource value: 0x7F020010
+			public const int issueAttributes = 2130837520;
 			
 			// aapt resource value: 0x7F020009
-			public const int issueTitle = 2130837513;
+			public const int issueDescription = 2130837513;
+			
+			// aapt resource value: 0x7F020007
+			public const int issueTitle = 2130837511;
 			
 			// aapt resource value: 0x7F0C000D
 			public const int italic = 2131492877;
 			
-			// aapt resource value: 0x7F020017
-			public const int item_attributes = 2130837527;
-			
 			// aapt resource value: 0x7F020015
-			public const int item_title = 2130837525;
+			public const int item_attributes = 2130837525;
+			
+			// aapt resource value: 0x7F020013
+			public const int item_title = 2130837523;
 			
 			// aapt resource value: 0x7F0C003B
 			public const int item_touch_helper_previous_elevation = 2131492923;
 			
-			// aapt resource value: 0x7F020010
-			public const int labelContainer = 2130837520;
+			// aapt resource value: 0x7F020008
+			public const int labelContainer = 2130837512;
 			
-			// aapt resource value: 0x7F020016
-			public const int label_container = 2130837526;
+			// aapt resource value: 0x7F020014
+			public const int label_container = 2130837524;
 			
 			// aapt resource value: 0x7F0C003C
 			public const int largeLabel = 2131492924;
-			
-			// aapt resource value: 0x7F020006
-			public const int layer = 2130837510;
 			
 			// aapt resource value: 0x7F020002
 			public const int left = 2130837506;
@@ -2784,9 +2794,6 @@ namespace GitHubIssues
 			
 			// aapt resource value: 0x7F0C0050
 			public const int pin = 2131492944;
-			
-			// aapt resource value: 0x7F020007
-			public const int progressBar = 2130837511;
 			
 			// aapt resource value: 0x7F0C0051
 			public const int progress_circular = 2131492945;
@@ -3924,8 +3931,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F1600A9
 			public const int Base_Widget_Design_TabLayout = 2132148393;
 			
-			// aapt resource value: 0x7F070004
-			public const int MyTheme_Splash = 2131165188;
+			// aapt resource value: 0x7F070003
+			public const int MyTheme_Splash = 2131165187;
 			
 			// aapt resource value: 0x7F1600AA
 			public const int Platform_AppCompat = 2132148394;
@@ -4236,8 +4243,8 @@ namespace GitHubIssues
 			// aapt resource value: 0x7F160110
 			public const int ThemeOverlay_AppCompat_Light = 2132148496;
 			
-			// aapt resource value: 0x7F070003
-			public const int ThemeOverlay_MySwitchCompat = 2131165187;
+			// aapt resource value: 0x7F070004
+			public const int ThemeOverlay_MySwitchCompat = 2131165188;
 			
 			// aapt resource value: 0x7F160111
 			public const int Theme_AppCompat = 2132148497;
